@@ -10,7 +10,7 @@ const VisitorTracker = () => {
 
     const recordHit = async () => {
       try {
-        await fetch('http://localhost:5000/api/visitors/hit', {
+        await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/visitors/hit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

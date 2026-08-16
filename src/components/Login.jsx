@@ -14,7 +14,7 @@ const Login = () => {
       const token = localStorage.getItem('authToken');
       if (token) {
         try {
-          const res = await fetch('http://localhost:5000/api/auth/verify', {
+          const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/verify', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -45,7 +45,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('http://localhost:5000/api/auth/login', {
+      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

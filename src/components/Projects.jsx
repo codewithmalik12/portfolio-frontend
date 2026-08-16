@@ -7,7 +7,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/projects');
+        const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/projects');
         if (res.ok) {
           const data = await res.json();
           setProjects(data || []);

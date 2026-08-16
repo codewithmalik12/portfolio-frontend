@@ -27,7 +27,7 @@ const UserProfile = () => {
   const getAvatarUrl = (path) => {
     if (!path) return '';
     if (path.startsWith('http')) return path;
-    return `http://localhost:5000${path}`;
+    return `https://creative-upliftment-production-c7fd.up.railway.app${path}`;
   };
 
   useEffect(() => {
@@ -51,7 +51,7 @@ const UserProfile = () => {
     // Verify token with backend
     const verifyToken = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/auth/verify', {
+        const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/verify', {
           headers: {
             'Authorization': `Bearer ${storedToken}`
           }
@@ -126,7 +126,7 @@ const UserProfile = () => {
         formData.append('removeProfilePic', 'true');
       }
 
-      const res = await fetch('http://localhost:5000/api/auth/profile', {
+      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/profile', {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`

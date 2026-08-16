@@ -62,7 +62,7 @@ const Signup = () => {
         formData.append('profilePic', profilePicFile);
       }
 
-      const res = await fetch('http://localhost:5000/api/auth/signup', {
+      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/signup', {
         method: 'POST',
         body: formData
       });

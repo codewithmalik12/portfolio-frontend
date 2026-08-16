@@ -1,0 +1,46 @@
+
+@import "tailwindcss";
+
+@theme {
+  --color-accent-main: #10b981; /* Emerald 500 */
+  --color-accent-hover: #059669; /* Emerald 600 */
+  --color-accent-light: rgba(16, 185, 129, 0.1);
+  
+  --color-bg-base: #0a0a0a;
+  --color-bg-surface: #171717;
+  --color-bg-surface-hover: #262626;
+  
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  
+  --color-border-subtle: #262626;
+  
+  --font-sans: 'Inter', system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    background-color: var(--color-bg-base);
+    color: var(--color-text-primary);
+  }
+  
+  body {
+    @apply antialiased selection:bg-emerald-500/30 selection:text-emerald-200;
+  }
+}
+
+@layer utilities {
+  .section-padding {
+    @apply py-24 md:py-32;
+  }
+  
+  .glass-nav {
+    @apply bg-[var(--color-bg-base)]/80 backdrop-blur-md border-b border-[var(--color-border-subtle)];
+  }
+
+  .card {
+    @apply bg-[var(--color-bg-surface)] border border-[var(--color-border-subtle)] rounded-2xl overflow-hidden transition-all duration-300;
+  }
+}

@@ -14,7 +14,7 @@ const Login = () => {
       const token = localStorage.getItem('authToken');
       if (token) {
         try {
-          const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/auth/verify', {
+          const res = await fetch('https://portfolio-backend-malik.bonto.run/api/auth/verify', {
             headers: {
               'Authorization': `Bearer ${token}`
             }
@@ -45,7 +45,7 @@ const Login = () => {
     setLoading(true);
 
     try {
-      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/auth/login', {
+      const res = await fetch('https://portfolio-backend-malik.bonto.run/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

@@ -85,7 +85,7 @@ const AdminDashboard = () => {
 
     const verifyToken = async () => {
       try {
-        const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/verify', {
+        const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/auth/verify', {
           headers: {
             'Authorization': `Bearer ${storedToken}`
           }
@@ -129,7 +129,7 @@ const AdminDashboard = () => {
   const fetchStats = async (currentToken) => {
     setStatsLoading(true);
     try {
-      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/visitors/stats', {
+      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/visitors/stats', {
         headers: {
           'Authorization': `Bearer ${currentToken || token}`
         }
@@ -149,7 +149,7 @@ const AdminDashboard = () => {
   const fetchProjects = async () => {
     setProjectsLoading(true);
     try {
-      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/projects');
+      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/projects');
       if (res.ok) {
         const data = await res.json();
         setProjects(data);
@@ -165,7 +165,7 @@ const AdminDashboard = () => {
   const fetchMessages = async (currentToken) => {
     setMessagesLoading(true);
     try {
-      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/messages', {
+      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/messages', {
         headers: {
           'Authorization': `Bearer ${currentToken || token}`
         }
@@ -221,7 +221,7 @@ const AdminDashboard = () => {
         body.password = newPassword;
       }
 
-      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/auth/profile', {
+      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/auth/profile', {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -288,8 +288,8 @@ const AdminDashboard = () => {
     setProjectError('');
     
     const url = editingProjectId 
-      ? `https://creative-upliftment-production-c7fd.up.railway.app/api/projects/${editingProjectId}`
-      : 'https://creative-upliftment-production-c7fd.up.railway.app/api/projects';
+      ? `https://https://portfolio-backend-malik.bonto.run/api/projects/${editingProjectId}`
+      : 'https://https://portfolio-backend-malik.bonto.run/api/projects';
       
     const method = editingProjectId ? 'PUT' : 'POST';
 
@@ -320,7 +320,7 @@ const AdminDashboard = () => {
     if (!window.confirm('Are you sure you want to delete this project?')) return;
 
     try {
-      const res = await fetch(`https://creative-upliftment-production-c7fd.up.railway.app/api/projects/${projectId}`, {
+      const res = await fetch(`https://https://portfolio-backend-malik.bonto.run/api/projects/${projectId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -341,7 +341,7 @@ const AdminDashboard = () => {
   // Messages operations
   const handleMarkAsRead = async (messageId, currentStatus) => {
     try {
-      const res = await fetch(`https://creative-upliftment-production-c7fd.up.railway.app/api/messages/${messageId}/read`, {
+      const res = await fetch(`https://https://portfolio-backend-malik.bonto.run/api/messages/${messageId}/read`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
@@ -362,7 +362,7 @@ const AdminDashboard = () => {
     if (!window.confirm('Delete this message?')) return;
 
     try {
-      const res = await fetch(`https://creative-upliftment-production-c7fd.up.railway.app/api/messages/${messageId}`, {
+      const res = await fetch(`https://https://portfolio-backend-malik.bonto.run/api/messages/${messageId}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`

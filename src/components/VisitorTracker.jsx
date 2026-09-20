@@ -10,7 +10,7 @@ const VisitorTracker = () => {
 
     const recordHit = async () => {
       try {
-        await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/visitors/hit', {
+        await fetch('https://https://portfolio-backend-malik.bonto.run/api/visitors/hit', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

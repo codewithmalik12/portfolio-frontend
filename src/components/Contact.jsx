@@ -15,7 +15,7 @@ const Contact = () => {
     setErrorMsg('');
 
     try {
-      const res = await fetch('https://creative-upliftment-production-c7fd.up.railway.app/api/messages', {
+      const res = await fetch('https://https://portfolio-backend-malik.bonto.run/api/messages', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
